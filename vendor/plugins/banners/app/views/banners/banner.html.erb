@@ -37,14 +37,6 @@ $("#myScroll").mbScrollable({
 <% end %>
 
 <% content_for :body_content_right do %>
-  <h2>Other Banners</h2>
-  <ul id="banners">
-    <% @banners.each do |banner| %>
-      <li>
-        <%= link_to banner.banner_name, banner_url(banner) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+  <% end %>
 
 <%= render :partial => "/shared/content_page" %>

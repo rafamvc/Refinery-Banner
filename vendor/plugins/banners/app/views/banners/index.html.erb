@@ -1,0 +1,8 @@
+<h2>Banners</h2>
+  <ul id="banners">
+    <% @banners.each do |banner| %>
+      <li>
+        <%= link_to banner.banner_name, banner_url(banner) %>
+      </li>
+    <% end %>
+  </ul>

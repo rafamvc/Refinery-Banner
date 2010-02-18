@@ -11,6 +11,12 @@ class BannersController < ApplicationController
     present(@page)
   end
   
+  def index
+    @banners = Banner.all
+
+    present(@page)
+  end
+  
   def banner
     @banner = Banner.find(params[:id])
 
