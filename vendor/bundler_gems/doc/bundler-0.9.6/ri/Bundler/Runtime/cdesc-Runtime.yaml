@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Bundler::Runtime
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: SharedHelpers
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: actual_dependencies
+- !ruby/object:RI::MethodSummary 
+  name: dependencies
+- !ruby/object:RI::MethodSummary 
+  name: dependencies_for
+- !ruby/object:RI::MethodSummary 
+  name: gems
+- !ruby/object:RI::MethodSummary 
+  name: index
+- !ruby/object:RI::MethodSummary 
+  name: lock
+- !ruby/object:RI::MethodSummary 
+  name: locked?
+- !ruby/object:RI::MethodSummary 
+  name: pack
+- !ruby/object:RI::MethodSummary 
+  name: require
+- !ruby/object:RI::MethodSummary 
+  name: setup
+- !ruby/object:RI::MethodSummary 
+  name: specs
+- !ruby/object:RI::MethodSummary 
+  name: specs_for
+name: Runtime
+superclass: Environment

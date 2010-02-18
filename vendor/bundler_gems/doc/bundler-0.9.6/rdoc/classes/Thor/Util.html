@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: Thor::Util</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">Thor::Util</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/bundler/vendor/thor/util_rb.html">
+                lib/bundler/vendor/thor/util.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+This module holds several utilities:
+</p>
+<p>
+1) Methods to convert thor namespaces to constants and vice-versa.
+</p>
+<pre>
+  Thor::Utils.namespace_from_thor_class(Foo::Bar::Baz) #=&gt; &quot;foo:bar:baz&quot;
+</pre>
+<p>
+2) Loading thor files and sandboxing:
+</p>
+<pre>
+  Thor::Utils.load_thorfile(&quot;~/.thor/foo&quot;)
+</pre>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000017">camel_case</a>&nbsp;&nbsp;
+      <a href="#M000012">find_by_namespace</a>&nbsp;&nbsp;
+      <a href="#M000023">globs_for</a>&nbsp;&nbsp;
+      <a href="#M000019">load_thorfile</a>&nbsp;&nbsp;
+      <a href="#M000013">namespace_from_thor_class</a>&nbsp;&nbsp;
+      <a href="#M000018">namespace_to_thor_class_and_task</a>&nbsp;&nbsp;
+      <a href="#M000014">namespaces_in_content</a>&nbsp;&nbsp;
+      <a href="#M000024">ruby_command</a>&nbsp;&nbsp;
+      <a href="#M000016">snake_case</a>&nbsp;&nbsp;
+      <a href="#M000015">thor_classes_in</a>&nbsp;&nbsp;
+      <a href="#M000021">thor_root</a>&nbsp;&nbsp;
+      <a href="#M000022">thor_root_glob</a>&nbsp;&nbsp;
+      <a href="#M000020">user_home</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000017" class="method-detail">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000017.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000017.html');return false;">
+          <span class="method-name">camel_case</span><span class="method-args">(str)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Receives a string and convert it to camel case. <a
+href="Util.html#M000017">camel_case</a> returns CamelCase.
+</p>
+<h4>Parameters</h4>
+<p>
+String
+</p>
+<h4>Returns</h4>
+<p>
+String
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000012.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000012.html');return false;">
+          <span class="method-name">find_by_namespace</span><span class="method-args">(namespace)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Receives a namespace and search for it in the <a
+href="Base.html">Thor::Base</a> subclasses.
+</p>
+<h4>Parameters</h4>
+<table>
+<tr><td valign="top">namespace&lt;String&gt;:</td><td>The namespace to search for.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000023" class="method-detail">
+        <a name="M000023"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000023.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000023.html');return false;">
+          <span class="method-name">globs_for</span><span class="method-args">(path)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Where to look for <a href="../Thor.html">Thor</a> files.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000019.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000019.html');return false;">
+          <span class="method-name">load_thorfile</span><span class="method-args">(path, content=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Receives a path and load the thor file in the path. The file is evaluated
+inside the sandbox to avoid namespacing conflicts.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000013" class="method-detail">
+        <a name="M000013"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000013.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000013.html');return false;">
+          <span class="method-name">namespace_from_thor_class</span><span class="method-args">(constant, remove_default=true)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Receives a constant and converts it to a <a href="../Thor.html">Thor</a>
+namespace. Since <a href="../Thor.html">Thor</a> tasks can be added to a
+sandbox, this method is also responsable for removing the sandbox
+namespace.
+</p>
+<p>
+This method should not be used in general because it&#8216;s used to deal
+with older versions of <a href="../Thor.html">Thor</a>. On current
+versions, if you need to get the namespace from a class, just call
+namespace on it.
+</p>
+<h4>Parameters</h4>
+<table>
+<tr><td valign="top">constant&lt;Object&gt;:</td><td>The constant to be converted to the thor path.
+
+</td></tr>
+</table>
+<h4>Returns</h4>
+<table>
+<tr><td valign="top">String:</td><td>If we receive Foo::Bar::Baz it returns &quot;foo:bar:baz&quot;
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000018" class="method-detail">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000018.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000018.html');return false;">
+          <span class="method-name">namespace_to_thor_class_and_task</span><span class="method-args">(namespace, raise_if_nil=true)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Receives a namespace and tries to retrieve a <a
+href="../Thor.html">Thor</a> or Thor::Group class from it. It first
+searches for a class using the all the given namespace, if it&#8216;s not
+found, removes the highest entry and searches for the class again. If
+found, returns the highest entry as the class name.
+</p>
+<h4>Examples</h4>
+<pre>
+  class Foo::Bar &lt; Thor
+    def baz
+    end
+  end
+
+  class Baz::Foo &lt; Thor::Group
+  end
+
+  Thor::Util.namespace_to_thor_class(&quot;foo:bar&quot;)     #=&gt; Foo::Bar, nil # will invoke default task
+  Thor::Util.namespace_to_thor_class(&quot;baz:foo&quot;)     #=&gt; Baz::Foo, nil
+  Thor::Util.namespace_to_thor_class(&quot;foo:bar:baz&quot;) #=&gt; Foo::Bar, &quot;baz&quot;
+</pre>
+<h4>Parameters</h4>
+<p>
+namespace&lt;String&gt;
+</p>
+<h4>Errors</h4>
+<table>
+<tr><td valign="top"><a href="Error.html">Thor::Error</a>:</td><td>raised if the namespace cannot be found.
+
+</td></tr>
+<tr><td valign="top"><a href="Error.html">Thor::Error</a>:</td><td>raised if the namespace evals to a class which does not inherit from <a
+href="../Thor.html">Thor</a> or Thor::Group.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000014" class="method-detail">
+        <a name="M000014"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000014.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000014.html');return false;">
+          <span class="method-name">namespaces_in_content</span><span class="method-args">(contents, file=__FILE__)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Given the contents, evaluate it inside the sandbox and returns the
+namespaces defined in the sandbox.
+</p>
+<h4>Parameters</h4>
+<p>
+contents&lt;String&gt;
+</p>
+<h4>Returns</h4>
+<p>
+Array[Object]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000024" class="method-detail">
+        <a name="M000024"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000024.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000024.html');return false;">
+          <span class="method-name">ruby_command</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the path to the ruby interpreter taking into account multiple
+installations and windows extensions.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000016" class="method-detail">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000016.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000016.html');return false;">
+          <span class="method-name">snake_case</span><span class="method-args">(str)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Receives a string and convert it to snake case. SnakeCase returns <a
+href="Util.html#M000016">snake_case</a>.
+</p>
+<h4>Parameters</h4>
+<p>
+String
+</p>
+<h4>Returns</h4>
+<p>
+String
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000015" class="method-detail">
+        <a name="M000015"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000015.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000015.html');return false;">
+          <span class="method-name">thor_classes_in</span><span class="method-args">(klass)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the thor classes declared inside the given class.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000021.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000021.html');return false;">
+          <span class="method-name">thor_root</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the root where thor files are located, dependending on the OS.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000022.html');return false;">
+          <span class="method-name">thor_root_glob</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the files in the thor root. On Windows <a
+href="Util.html#M000021">thor_root</a> will be something like this:
+</p>
+<pre>
+  C:\Documents and Settings\james\.thor
+</pre>
+<p>
+If we don&#8216;t gsub the \ character, Dir.glob will fail.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="Util.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('Util.src/M000020.html');return false;">
+          <span class="method-name">user_home</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

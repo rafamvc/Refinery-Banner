@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: errors
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: resolve
+comment: 
+constants: []
+
+full_name: Bundler::Resolver
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: debug
+- !ruby/object:RI::MethodSummary 
+  name: resolve
+- !ruby/object:RI::MethodSummary 
+  name: resolve_requirement
+- !ruby/object:RI::MethodSummary 
+  name: search
+name: Resolver
+superclass: Object

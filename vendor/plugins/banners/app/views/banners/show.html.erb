@@ -1,0 +1,114 @@
+<% content_for :body_content_title do %>
+  <%= @banner.banner_name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+<style type="text/css">
+
+   .mbGallery .header table{
+     width:265px !important;
+   }
+   .mbGallery{
+     -moz-box-shadow:#333 2px 2px 5px;
+     -webkit-box-shadow:#333 2px 2px 5px;
+   }
+   .galleryCont{
+     display:none;
+   }
+   .descriptionBox{
+     font-size:10px;
+     background-color:#333333;
+     color:white;
+   }
+
+   .desc{
+     font-family:Arial, Helvetica, sans-serif;
+     color:#000000;
+     font-size:14px;
+   }
+
+   .imgDesc{
+     font-family:Arial, Helvetica, sans-serif;
+     color:#fff;
+     font-size:10px;
+
+   }
+
+
+   .mbMask{
+     position:absolute;
+     background:orange;
+     left:0;
+     top:0;
+     width:100%;
+     height:100%;
+   }
+
+ </style>
+  <%= javascript_include_tag "jquery" %>
+<%= javascript_include_tag "mbGallery" %>
+  <script type="text/javascript">
+    $(function(){
+
+      $.fn.mbGallery.defaults={
+        containment:"",
+        galleryTop:10,
+        galleryWidth: 300,
+        galleryHeight: 300,
+        galleryMaxWidth: 0,
+        galleryMaxHeight: $("window").height()-120,
+        galleryColor: "#333",
+        galleryFrameBorder: 12,
+        galleryFrameColor: "#fff",
+        maskOpacity:.5,
+        maskBgnd:"transparent",
+
+        startFrom: "random",
+        headerOpacity: 0.8,
+        thumbsBorder: 4,
+        thumbHeight: 50,
+        thumbStripWidth:250,
+        thumbStripColor: "#333333",
+        thumbStripPos: "right",
+        thumbSelectColor: "black",
+        thumbOverColor: "#cccccc",
+        imageSelector: ".imgFull",
+        thumbnailSelector: ".imgThumb",
+        descSelector: ".imgDesc",
+        descriptionWidth:300,
+
+        labelColor: "#333",
+        labelColorDisactive: "#333",
+        labelTextColor: "#fff",
+        labelTextSize: "11px",
+        labelHeight: 20,
+
+        iconFolder: "/images/refinery-banner/galery_elements/white",
+        fadeTime: 500,
+        autoSlide: true,
+        slideTimer: 6000,
+        autoSize: true,
+        startTimer:0
+      };
+      $('#g1').mbGallery({maskBgnd:'#fff', maskOpacity:.9, containment:'galleryPlace'});
+    });
+  </script>
+
+<div id="galleryPlace"></div>
+
+  <div id="g1" class="galleryCont">
+	<% @banner.image_banners.each do |image_banner| %>
+	    <%= image_tag image_banner.image_banner.url(:thumb), :class => 'imgThumb'%>
+	    <%= image_tag image_banner.image_banner.url(:large), :class => 'imgFull'%>
+	    <div class="imgDesc"><%=image_banner.image_banner_file_name%></div>
+	<%end%>
+</div>
+
+
+
+<% end %>
+
+<% content_for :body_content_right do %>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -1,0 +1,16 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(banner) -%>">
+  <span class='title'>
+    <span class='actions'>
+      <%= link_to refinery_icon_tag("application_go.png"), banner_url(banner),
+          :title => 'View this banner<br/><em>Opens in a new window</em>',
+          :target => "_blank" %>
+      <%= link_to refinery_icon_tag("application_edit.png"), edit_admin_banner_path(banner),
+           :title => 'Edit this banner' %>
+      <%= link_to refinery_icon_tag("delete.png"), admin_banner_path(banner),
+          :confirm => 'Are you sure you want to remove this banner forever?',
+          :class => "cancel confirm-delete",
+          :title => 'Remove this banner forever' %>
+    </span>
+    <%=h banner.banner_name %> <span class="preview">&nbsp;</span>
+  </span>
+</li>

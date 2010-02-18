@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: relative_loaded_from
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: from_gemspec
+comment: 
+constants: []
+
+full_name: Bundler::Specification
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: full_gem_path
+- !ruby/object:RI::MethodSummary 
+  name: loaded_from
+name: Specification
+superclass: Gem::Specification

@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Bundler::SharedHelpers
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: default_gemfile
+- !ruby/object:RI::MethodSummary 
+  name: in_bundle?
+- !ruby/object:RI::MethodSummary 
+  name: reverse_rubygems_kernel_mixin
+name: SharedHelpers
+superclass: 

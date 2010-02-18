@@ -1,0 +1,34 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ARGV
+  value: "::ARGV.dup"
+full_name: Bundler::CLI
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: check
+- !ruby/object:RI::MethodSummary 
+  name: exec
+- !ruby/object:RI::MethodSummary 
+  name: init
+- !ruby/object:RI::MethodSummary 
+  name: install
+- !ruby/object:RI::MethodSummary 
+  name: lock
+- !ruby/object:RI::MethodSummary 
+  name: pack
+- !ruby/object:RI::MethodSummary 
+  name: show
+- !ruby/object:RI::MethodSummary 
+  name: unlock
+name: CLI
+superclass: Thor

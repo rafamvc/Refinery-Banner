@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Bundler::Definition::from_gemfile
+is_singleton: true
+name: from_gemfile
+params: (gemfile)
+visibility: public

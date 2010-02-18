@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>install (Bundler::CLI)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/bundler/cli.rb, line 49</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">install</span>(<span class="ruby-identifier">path</span> = <span class="ruby-keyword kw">nil</span>)
+      <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">dup</span>
+      <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">:without</span>] <span class="ruby-operator">||=</span> []
+      <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">:without</span>].<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span> <span class="ruby-identifier">g</span>.<span class="ruby-identifier">to_sym</span> }
+
+      <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">settings</span>[<span class="ruby-identifier">:path</span>] = <span class="ruby-identifier">path</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span>
+      <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">settings</span>[<span class="ruby-identifier">:disable_shared_gems</span>] = <span class="ruby-value str">'1'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value str">&quot;disable-shared-gems&quot;</span>]
+
+      <span class="ruby-identifier">remove_lockfiles</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:relock</span>]
+
+      <span class="ruby-constant">Installer</span>.<span class="ruby-identifier">install</span>(<span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">root</span>, <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">definition</span>, <span class="ruby-identifier">opts</span>)
+      <span class="ruby-comment cmt"># Ensures that .bundle/environment.rb exists</span>
+      <span class="ruby-comment cmt"># TODO: Figure out a less hackish way to do this</span>
+      <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">load</span>
+
+      <span class="ruby-identifier">lock</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:relock</span>]
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

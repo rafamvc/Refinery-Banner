@@ -1,0 +1,227 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+    Methods
+
+  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Methods</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div id="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+    <a href="classes/Bundler/Index.html#M000191"><< (Bundler::Index)</a><br />
+    <a href="classes/Bundler/Settings.html#M000126">[] (Bundler::Settings)</a><br />
+    <a href="classes/Bundler/Index.html#M000190">[] (Bundler::Index)</a><br />
+    <a href="classes/Bundler/Settings.html#M000127">[]= (Bundler::Settings)</a><br />
+    <a href="classes/Bundler/RemoteSpecification.html#M000184">__swap__ (Bundler::RemoteSpecification)</a><br />
+    <a href="classes/Bundler/Definition/Locked.html#M000135">actual_dependencies (Bundler::Definition::Locked)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000141">actual_dependencies (Bundler::Runtime)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000057">all_tasks (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000049">argument (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000050">arguments (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000030">ask (Thor::Shell::Basic)</a><br />
+    <a href="classes/Thor.html#M000010">banner (Thor)</a><br />
+    <a href="classes/Bundler.html#M000080">bundle_path (Bundler)</a><br />
+    <a href="classes/Bundler.html#M000087">cache (Bundler)</a><br />
+    <a href="classes/Thor/Util.html#M000017">camel_case (Thor::Util)</a><br />
+    <a href="classes/Bundler/CLI.html#M000118">check (Bundler::CLI)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000052">class_option (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000051">class_options (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Bundler.html#M000078">configure (Bundler)</a><br />
+    <a href="classes/Bundler/UI/Shell.html#M000177">confirm (Bundler::UI::Shell)</a><br />
+    <a href="classes/Bundler/UI.html#M000173">confirm (Bundler::UI)</a><br />
+    <a href="classes/Bundler/UI/Shell.html#M000175">debug (Bundler::UI::Shell)</a><br />
+    <a href="classes/Bundler/Resolver.html#M000198">debug (Bundler::Resolver)</a><br />
+    <a href="classes/Bundler/SharedHelpers.html#M000091">default_gemfile (Bundler::SharedHelpers)</a><br />
+    <a href="classes/Bundler/Source/Path.html#M000105">default_spec (Bundler::Source::Path)</a><br />
+    <a href="classes/Thor.html#M000001">default_task (Thor)</a><br />
+    <a href="classes/Bundler.html#M000084">definition (Bundler)</a><br />
+    <a href="classes/Bundler/Installer.html#M000167">dependencies (Bundler::Installer)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000140">dependencies (Bundler::Runtime)</a><br />
+    <a href="classes/Bundler/Definition/Locked.html#M000136">dependencies (Bundler::Definition::Locked)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000144">dependencies_for (Bundler::Runtime)</a><br />
+    <a href="classes/Bundler/Dsl.html#M000164">deprecate (Bundler::Dsl)</a><br />
+    <a href="classes/Thor.html#M000002">desc (Thor)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000039">dynamic_width (Thor::Shell::Basic)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000040">dynamic_width_stty (Thor::Shell::Basic)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000041">dynamic_width_tput (Thor::Shell::Basic)</a><br />
+    <a href="classes/Bundler/Index.html#M000192">each (Bundler::Index)</a><br />
+    <a href="classes/Bundler/Index.html#M000188">empty? (Bundler::Index)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000037">error (Thor::Shell::Basic)</a><br />
+    <a href="classes/Bundler/UI.html#M000171">error (Bundler::UI)</a><br />
+    <a href="classes/Bundler/UI/Shell.html#M000179">error (Bundler::UI::Shell)</a><br />
+    <a href="classes/Bundler/Dsl.html#M000156">evaluate (Bundler::Dsl)</a><br />
+    <a href="classes/Bundler/CLI.html#M000124">exec (Bundler::CLI)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000066">exit_on_failure? (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000036">file_collision (Thor::Shell::Basic)</a><br />
+    <a href="classes/Thor/Util.html#M000012">find_by_namespace (Thor::Util)</a><br />
+    <a href="classes/Thor/Task.html#M000070">formatted_usage (Thor::Task)</a><br />
+    <a href="classes/Bundler/Index.html#M000195">freeze (Bundler::Index)</a><br />
+    <a href="classes/Bundler/Definition.html#M000128">from_gemfile (Bundler::Definition)</a><br />
+    <a href="classes/Bundler/Specification.html#M000150">from_gemspec (Bundler::Specification)</a><br />
+    <a href="classes/Bundler/Index.html#M000185">from_installed_gems (Bundler::Index)</a><br />
+    <a href="classes/Bundler/Definition.html#M000129">from_lock (Bundler::Definition)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000065">from_superclass (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Bundler/Specification.html#M000152">full_gem_path (Bundler::Specification)</a><br />
+    <a href="classes/Bundler/RemoteSpecification.html#M000183">full_name (Bundler::RemoteSpecification)</a><br />
+    <a href="classes/Bundler/Dsl.html#M000158">gem (Bundler::Dsl)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000147">gems (Bundler::Runtime)</a><br />
+    <a href="classes/Bundler/Dsl.html#M000161">git (Bundler::Dsl)</a><br />
+    <a href="classes/Thor/Util.html#M000023">globs_for (Thor::Util)</a><br />
+    <a href="classes/Bundler/Dsl.html#M000163">group (Bundler::Dsl)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000055">group (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Gem/Specification.html#M000076">groups (Gem::Specification)</a><br />
+    <a href="classes/Bundler/Definition/Locked.html#M000133">hash (Bundler::Definition::Locked)</a><br />
+    <a href="classes/Thor.html#M000011">help (Thor)</a><br />
+    <a href="classes/Thor.html#M000008">help (Thor)</a><br />
+    <a href="classes/Bundler.html#M000085">home (Bundler)</a><br />
+    <a href="classes/Bundler/SharedHelpers.html#M000092">in_bundle? (Bundler::SharedHelpers)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000148">index (Bundler::Runtime)</a><br />
+    <a href="classes/Bundler/UI.html#M000172">info (Bundler::UI)</a><br />
+    <a href="classes/Bundler/UI/Shell.html#M000176">info (Bundler::UI::Shell)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000063">inherited (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Bundler/CLI.html#M000116">init (Bundler::CLI)</a><br />
+    <a href="classes/Bundler/Index.html#M000187">initialize_copy (Bundler::Index)</a><br />
+    <a href="classes/Bundler/Source/Git.html#M000101">install (Bundler::Source::Git)</a><br />
+    <a href="classes/Bundler/Source/SystemGems.html#M000111">install (Bundler::Source::SystemGems)</a><br />
+    <a href="classes/Bundler/Source/Rubygems.html#M000115">install (Bundler::Source::Rubygems)</a><br />
+    <a href="classes/Bundler/Source/GemCache.html#M000096">install (Bundler::Source::GemCache)</a><br />
+    <a href="classes/Bundler/CLI.html#M000119">install (Bundler::CLI)</a><br />
+    <a href="classes/Bundler/Installer.html#M000165">install (Bundler::Installer)</a><br />
+    <a href="classes/Bundler/Source/Path.html#M000107">install (Bundler::Source::Path)</a><br />
+    <a href="classes/Bundler.html#M000086">install_path (Bundler)</a><br />
+    <a href="classes/Thor/Invocation.html#M000067">invoke (Thor::Invocation)</a><br />
+    <a href="classes/Bundler.html#M000083">load (Bundler)</a><br />
+    <a href="classes/Gem/Specification.html#M000075">load_paths (Gem::Specification)</a><br />
+    <a href="classes/Thor/Util.html#M000019">load_thorfile (Thor::Util)</a><br />
+    <a href="classes/Bundler/Specification.html#M000151">loaded_from (Bundler::Specification)</a><br />
+    <a href="classes/Bundler/Definition.html#M000131">local_index (Bundler::Definition)</a><br />
+    <a href="classes/Bundler/Source/Path.html#M000106">local_specs (Bundler::Source::Path)</a><br />
+    <a href="classes/Bundler/CLI.html#M000120">lock (Bundler::CLI)</a><br />
+    <a href="classes/Bundler/Source/Git.html#M000102">lock (Bundler::Source::Git)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000142">lock (Bundler::Runtime)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000143">locked? (Bundler::Runtime)</a><br />
+    <a href="classes/Thor.html#M000003">map (Thor)</a><br />
+    <a href="classes/Bundler/Index.html#M000194">merge (Bundler::Index)</a><br />
+    <a href="classes/Bundler/Index.html#M000193">merge! (Bundler::Index)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000064">method_added (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor.html#M000005">method_option (Thor)</a><br />
+    <a href="classes/Thor.html#M000004">method_options (Thor)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000060">namespace (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Util.html#M000013">namespace_from_thor_class (Thor::Util)</a><br />
+    <a href="classes/Thor/Util.html#M000018">namespace_to_thor_class_and_task (Thor::Util)</a><br />
+    <a href="classes/Thor/Util.html#M000014">namespaces_in_content (Thor::Util)</a><br />
+    <a href="classes/Bundler/UI/Shell.html#M000174">new (Bundler::UI::Shell)</a><br />
+    <a href="classes/Bundler/Source/GemCache.html#M000093">new (Bundler::Source::GemCache)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000137">new (Bundler::Runtime)</a><br />
+    <a href="classes/Bundler/Index.html#M000186">new (Bundler::Index)</a><br />
+    <a href="classes/Thor/Base.html#M000044">new (Thor::Base)</a><br />
+    <a href="classes/Bundler/RemoteSpecification.html#M000182">new (Bundler::RemoteSpecification)</a><br />
+    <a href="classes/Bundler/UI/RGProxy.html#M000180">new (Bundler::UI::RGProxy)</a><br />
+    <a href="classes/Bundler/Environment.html#M000169">new (Bundler::Environment)</a><br />
+    <a href="classes/Bundler/Definition/Locked.html#M000132">new (Bundler::Definition::Locked)</a><br />
+    <a href="classes/Bundler/Source/Rubygems.html#M000112">new (Bundler::Source::Rubygems)</a><br />
+    <a href="classes/Thor/Shell.html#M000025">new (Thor::Shell)</a><br />
+    <a href="classes/Thor/Task/Dynamic.html#M000072">new (Thor::Task::Dynamic)</a><br />
+    <a href="classes/Bundler/Definition.html#M000130">new (Bundler::Definition)</a><br />
+    <a href="classes/Bundler/Source/Git.html#M000097">new (Bundler::Source::Git)</a><br />
+    <a href="classes/Bundler/CLI.html#M000117">new (Bundler::CLI)</a><br />
+    <a href="classes/Bundler/Dsl.html#M000157">new (Bundler::Dsl)</a><br />
+    <a href="classes/Thor/Task.html#M000068">new (Thor::Task)</a><br />
+    <a href="classes/Bundler/Resolver.html#M000197">new (Bundler::Resolver)</a><br />
+    <a href="classes/Bundler/Dependency.html#M000155">new (Bundler::Dependency)</a><br />
+    <a href="classes/Bundler/Settings.html#M000125">new (Bundler::Settings)</a><br />
+    <a href="classes/Bundler/Source/Path.html#M000103">new (Bundler::Source::Path)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000034">no? (Thor::Shell::Basic)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000059">no_tasks (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Bundler/CLI.html#M000123">pack (Bundler::CLI)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000149">pack (Bundler::Runtime)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000029">padding= (Thor::Shell::Basic)</a><br />
+    <a href="classes/Bundler/Dsl.html#M000160">path (Bundler::Dsl)</a><br />
+    <a href="classes/Bundler/Source/Git.html#M000099">path (Bundler::Source::Git)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000062">print_options (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000035">print_table (Thor::Shell::Basic)</a><br />
+    <a href="classes/Thor.html#M000009">printable_tasks (Thor)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000053">remove_argument (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000054">remove_class_option (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000058">remove_task (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000139">require (Bundler::Runtime)</a><br />
+    <a href="classes/Bundler.html#M000082">require (Bundler)</a><br />
+    <a href="classes/Gem/Dependency.html#M000077">required_by (Gem::Dependency)</a><br />
+    <a href="classes/Gem/Specification.html#M000074">required_by (Gem::Specification)</a><br />
+    <a href="classes/Thor/Task.html#M000071">required_options (Thor::Task)</a><br />
+    <a href="classes/Bundler/Resolver.html#M000196">resolve (Bundler::Resolver)</a><br />
+    <a href="classes/Bundler/Resolver.html#M000199">resolve (Bundler::Resolver)</a><br />
+    <a href="classes/Bundler/Resolver.html#M000200">resolve_requirement (Bundler::Resolver)</a><br />
+    <a href="classes/Bundler/SharedHelpers.html#M000090">reverse_rubygems_kernel_mixin (Bundler::SharedHelpers)</a><br />
+    <a href="classes/Bundler.html#M000088">root (Bundler)</a><br />
+    <a href="classes/Thor/Util.html#M000024">ruby_command (Thor::Util)</a><br />
+    <a href="classes/Thor/Task.html#M000069">run (Thor::Task)</a><br />
+    <a href="classes/Bundler/Installer.html#M000166">run (Bundler::Installer)</a><br />
+    <a href="classes/Thor/Task/Dynamic.html#M000073">run (Thor::Task::Dynamic)</a><br />
+    <a href="classes/Bundler/UI/RGProxy.html#M000181">say (Bundler::UI::RGProxy)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000031">say (Thor::Shell::Basic)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000032">say_status (Thor::Shell::Basic)</a><br />
+    <a href="classes/Bundler/Resolver.html#M000201">search (Bundler::Resolver)</a><br />
+    <a href="classes/Bundler/Index.html#M000189">search (Bundler::Index)</a><br />
+    <a href="classes/Thor/Shell/Color.html#M000028">set_color (Thor::Shell::Color)</a><br />
+    <a href="classes/Bundler.html#M000089">settings (Bundler)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000138">setup (Bundler::Runtime)</a><br />
+    <a href="classes/Bundler.html#M000081">setup (Bundler)</a><br />
+    <a href="classes/Thor/Shell.html#M000026">shell (Thor::Shell)</a><br />
+    <a href="classes/Thor/Base.html#M000047">shell (Thor::Base)</a><br />
+    <a href="classes/Thor/Base.html#M000048">shell= (Thor::Base)</a><br />
+    <a href="classes/Thor/Shell.html#M000027">shell= (Thor::Shell)</a><br />
+    <a href="classes/Bundler/CLI.html#M000122">show (Bundler::CLI)</a><br />
+    <a href="classes/Thor/Util.html#M000016">snake_case (Thor::Util)</a><br />
+    <a href="classes/Bundler/Dsl.html#M000159">source (Bundler::Dsl)</a><br />
+    <a href="classes/Bundler/Definition/Locked.html#M000134">sources (Bundler::Definition::Locked)</a><br />
+    <a href="classes/Bundler/Installer.html#M000168">specs (Bundler::Installer)</a><br />
+    <a href="classes/Bundler/Source/GemCache.html#M000095">specs (Bundler::Source::GemCache)</a><br />
+    <a href="classes/Bundler/Source/Path.html#M000108">specs (Bundler::Source::Path)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000146">specs (Bundler::Runtime)</a><br />
+    <a href="classes/Bundler/Source/Rubygems.html#M000114">specs (Bundler::Source::Rubygems)</a><br />
+    <a href="classes/Bundler/Source/SystemGems.html#M000109">specs (Bundler::Source::SystemGems)</a><br />
+    <a href="classes/Bundler/Source/Git.html#M000100">specs (Bundler::Source::Git)</a><br />
+    <a href="classes/Bundler/Runtime.html#M000145">specs_for (Bundler::Runtime)</a><br />
+    <a href="classes/Thor.html#M000006">start (Thor)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000061">start (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Bundler/BundlerError.html#M000153">status_code (Bundler::BundlerError)</a><br />
+    <a href="classes/Bundler/BundlerError.html#M000154">status_code (Bundler::BundlerError)</a><br />
+    <a href="classes/Thor/Base.html#M000046">subclass_files (Thor::Base)</a><br />
+    <a href="classes/Thor/Base.html#M000045">subclasses (Thor::Base)</a><br />
+    <a href="classes/Thor.html#M000007">task_help (Thor)</a><br />
+    <a href="classes/Thor/Base/ClassMethods.html#M000056">tasks (Thor::Base::ClassMethods)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000038">terminal_width (Thor::Shell::Basic)</a><br />
+    <a href="classes/Thor/Util.html#M000015">thor_classes_in (Thor::Util)</a><br />
+    <a href="classes/Thor/Util.html#M000021">thor_root (Thor::Util)</a><br />
+    <a href="classes/Thor/Util.html#M000022">thor_root_glob (Thor::Util)</a><br />
+    <a href="classes/Bundler/Dsl.html#M000162">to_definition (Bundler::Dsl)</a><br />
+    <a href="classes/Bundler/Source/Path.html#M000104">to_s (Bundler::Source::Path)</a><br />
+    <a href="classes/Bundler/Source/Rubygems.html#M000113">to_s (Bundler::Source::Rubygems)</a><br />
+    <a href="classes/Bundler/Source/GemCache.html#M000094">to_s (Bundler::Source::GemCache)</a><br />
+    <a href="classes/Bundler/Source/Git.html#M000098">to_s (Bundler::Source::Git)</a><br />
+    <a href="classes/Bundler/Source/SystemGems.html#M000110">to_s (Bundler::Source::SystemGems)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000043">truncate (Thor::Shell::Basic)</a><br />
+    <a href="classes/Bundler.html#M000079">ui (Bundler)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000042">unix? (Thor::Shell::Basic)</a><br />
+    <a href="classes/Bundler/CLI.html#M000121">unlock (Bundler::CLI)</a><br />
+    <a href="classes/Thor/Util.html#M000020">user_home (Thor::Util)</a><br />
+    <a href="classes/Bundler/UI/Shell.html#M000178">warn (Bundler::UI::Shell)</a><br />
+    <a href="classes/Bundler/UI.html#M000170">warn (Bundler::UI)</a><br />
+    <a href="classes/Thor/Shell/Basic.html#M000033">yes? (Thor::Shell::Basic)</a><br />
+  </div>
+</div>
+</body>
+</html>

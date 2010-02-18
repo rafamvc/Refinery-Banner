@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "TODO: Add debug mode"
+full_name: Bundler::UI::Shell#debug
+is_singleton: false
+name: debug
+params: (msg)
+visibility: public

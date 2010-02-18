@@ -1,0 +1,31 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: deprecate
+- !ruby/object:RI::MethodSummary 
+  name: evaluate
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Bundler::Dsl
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: gem
+- !ruby/object:RI::MethodSummary 
+  name: git
+- !ruby/object:RI::MethodSummary 
+  name: group
+- !ruby/object:RI::MethodSummary 
+  name: path
+- !ruby/object:RI::MethodSummary 
+  name: source
+- !ruby/object:RI::MethodSummary 
+  name: to_definition
+name: Dsl
+superclass: Object

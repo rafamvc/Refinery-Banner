@@ -1,0 +1,53 @@
+#myScroll{
+ padding:0px;
+}
+#myScroll .scrollEl{
+  display:none;
+  font-family:sans-serif;
+  font-size:180%;
+  color:white;
+  text-align:center;
+}
+#myScroll1 .scrollEl{
+  display:none;
+  background:url("../elements/elBgnd.png") repeat-x;
+  font-family:sans-serif;
+  font-size:180%;
+  padding:10px;
+  padding-top:40%;
+  color:white;
+  height:100%;
+  text-align:center;
+}
+.photo_in {
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    padding: 5px;
+}
+#controls div, #controls1 div{
+  float:right;
+  font-family:sans-serif;
+  font-size:10px;
+  background:#fff;
+  display:inline-block;
+  padding-left:15px;
+  cursor:pointer;
+
+}
+
+#myScroll1{
+  float:left;
+  margin-right:20px;
+}
+
+#controls .sel, #controls1 .sel{
+  color:black !important;
+  font-weight:bold;
+}
+#controls .disabled, #controls1 .disabled{
+  color:gray;
+}
+#controls .page, #controls1 .page{
+  color:gray;
+  padding-left:5px;
+}

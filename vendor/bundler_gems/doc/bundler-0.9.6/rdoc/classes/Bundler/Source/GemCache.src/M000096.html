@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>install (Bundler::Source::GemCache)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/bundler/source.rb, line 116</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">install</span>(<span class="ruby-identifier">spec</span>)
+        <span class="ruby-identifier">destination</span> = <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">dir</span>
+
+        <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">debug</span> <span class="ruby-value str">&quot;  * Installing from pack&quot;</span>
+        <span class="ruby-identifier">installer</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Installer</span>.<span class="ruby-identifier">new</span> <span class="ruby-node">&quot;#{@path}/#{spec.full_name}.gem&quot;</span>,
+          <span class="ruby-identifier">:install_dir</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">dir</span>,
+          <span class="ruby-identifier">:ignore_dependencies</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>,
+          <span class="ruby-identifier">:wrappers</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>,
+          <span class="ruby-identifier">:env_shebang</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>,
+          <span class="ruby-identifier">:bin_dir</span>             =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{Gem.dir}/bin&quot;</span>
+
+        <span class="ruby-identifier">installer</span>.<span class="ruby-identifier">install</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,34 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Receives a namespace and tries to retrieve a Thor or Thor::Group class from it. It first searches for a class using the all the given namespace, if it's not found, removes the highest entry and searches for the class again. If found, returns the highest entry as the class name.
+- !ruby/struct:SM::Flow::H 
+  level: 4
+  text: Examples
+- !ruby/struct:SM::Flow::VERB 
+  body: "  class Foo::Bar &lt; Thor\n    def baz\n    end\n  end\n\n  class Baz::Foo &lt; Thor::Group\n  end\n\n  Thor::Util.namespace_to_thor_class(&quot;foo:bar&quot;)     #=&gt; Foo::Bar, nil # will invoke default task\n  Thor::Util.namespace_to_thor_class(&quot;baz:foo&quot;)     #=&gt; Baz::Foo, nil\n  Thor::Util.namespace_to_thor_class(&quot;foo:bar:baz&quot;) #=&gt; Foo::Bar, &quot;baz&quot;\n"
+- !ruby/struct:SM::Flow::H 
+  level: 4
+  text: Parameters
+- !ruby/struct:SM::Flow::P 
+  body: namespace&lt;String&gt;
+- !ruby/struct:SM::Flow::H 
+  level: 4
+  text: Errors
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "Thor::Error:"
+    body: raised if the namespace cannot be found.
+  - !ruby/struct:SM::Flow::LI 
+    label: "Thor::Error:"
+    body: raised if the namespace evals to a class which does not inherit from Thor or Thor::Group.
+  type: :NOTE
+full_name: Thor::Util::namespace_to_thor_class_and_task
+is_singleton: true
+name: namespace_to_thor_class_and_task
+params: (namespace, raise_if_nil=true)
+visibility: public

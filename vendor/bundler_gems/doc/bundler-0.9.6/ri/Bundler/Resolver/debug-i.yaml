@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: if defined?($debug) && $debug
+comment: 
+full_name: Bundler::Resolver#debug
+is_singleton: false
+name: debug
+params: () {|if defined?($debug) && $debug| ...}
+visibility: public

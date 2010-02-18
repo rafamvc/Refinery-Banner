@@ -1,0 +1,50 @@
+<% content_for :body_content_title do %>
+  <%= @banner.banner_name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+<%= stylesheet_link_tag "mb.scrollable" %>
+
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "mbScrollable" %>
+  <script type="text/javascript" >
+    $(function(){
+$("#myScroll").mbScrollable({
+        width:565,
+        elementsInPage:1,
+        elementMargin:2,
+        height:"auto",
+        controls:"#controls",
+        autoscroll:true,
+        scrollTimer:4000
+      });
+	setTimeout(function(){$("#wrapper").fadeIn();},2000);
+    });
+</script>
+
+  <div>
+	  <div id="controls" class='clearfix'>
+	    <div class="pageIndex"></div>
+	    <div class="start">start</div><div class="stop">stop</div>
+	  </div>
+	<div id="myScroll">
+		<% @banner.image_banners.each do |image_banner| %>
+	    <div class="scrollEl" style="background-color:#ffffff"><%= image_tag image_banner.image_banner.url(:medium), :class => 'photo_in'%></div>
+		<%end%>
+	  </div>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2>Other Banners</h2>
+  <ul id="banners">
+    <% @banners.each do |banner| %>
+      <li>
+        <%= link_to banner.banner_name, banner_url(banner) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

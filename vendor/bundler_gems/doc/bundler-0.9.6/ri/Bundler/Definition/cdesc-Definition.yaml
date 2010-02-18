@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: dependencies
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: sources
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: from_gemfile
+- !ruby/object:RI::MethodSummary 
+  name: from_lock
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Bundler::Definition
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: local_index
+name: Definition
+superclass: Object

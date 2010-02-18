@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Bundler::Index::from_installed_gems
+is_singleton: true
+name: from_installed_gems
+params: ()
+visibility: public

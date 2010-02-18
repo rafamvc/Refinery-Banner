@@ -1,0 +1,23 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: autorequire
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: groups
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Bundler::Dependency
+includes: []
+
+instance_methods: []
+
+name: Dependency
+superclass: Gem::Dependency

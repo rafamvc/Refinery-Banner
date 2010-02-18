@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Bundler::Source::GemCache
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: install
+- !ruby/object:RI::MethodSummary 
+  name: specs
+- !ruby/object:RI::MethodSummary 
+  name: to_s
+name: GemCache
+superclass: Object

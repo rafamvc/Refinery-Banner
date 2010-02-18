@@ -1,0 +1,23 @@
+
+
+  <%
+ 	image_banner = obj
+	unless image_banner.nil? or image_banner.image_banner_file_name.blank?
+	 %>	
+	<div class='fields' style='display:inline; padding:10px'>
+  	<%= image_tag image_banner.image_banner.url(:thumb) %>
+  <%else%>
+<div class='fields'>
+	<br>
+	<br>
+  	<%= f.label :image_banner, "Select the image to upload" -%>
+  	<%= f.file_field :image_banner %>
+  <%end%>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to_remove_fields refinery_icon_tag("delete.png"), f %>
+
+</div>
+  
+
+
+

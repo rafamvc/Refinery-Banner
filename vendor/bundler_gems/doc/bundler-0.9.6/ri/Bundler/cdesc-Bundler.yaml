@@ -1,0 +1,48 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: bundle_path
+  rw: W
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: ui
+  rw: W
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: bundle_path
+- !ruby/object:RI::MethodSummary 
+  name: cache
+- !ruby/object:RI::MethodSummary 
+  name: configure
+- !ruby/object:RI::MethodSummary 
+  name: definition
+- !ruby/object:RI::MethodSummary 
+  name: home
+- !ruby/object:RI::MethodSummary 
+  name: install_path
+- !ruby/object:RI::MethodSummary 
+  name: load
+- !ruby/object:RI::MethodSummary 
+  name: require
+- !ruby/object:RI::MethodSummary 
+  name: root
+- !ruby/object:RI::MethodSummary 
+  name: settings
+- !ruby/object:RI::MethodSummary 
+  name: setup
+- !ruby/object:RI::MethodSummary 
+  name: ui
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: VERSION
+  value: "\"0.9.6\""
+full_name: Bundler
+includes: []
+
+instance_methods: []
+
+name: Bundler
+superclass: 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>invoke (Thor::Invocation)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/bundler/vendor/thor/invocation.rb, line 95</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">invoke</span>(<span class="ruby-identifier">name</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">task</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">args</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">opts</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">config</span>=<span class="ruby-keyword kw">nil</span>)
+      <span class="ruby-identifier">task</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">opts</span>, <span class="ruby-identifier">config</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">task</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">opts</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">task</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+      <span class="ruby-identifier">args</span>, <span class="ruby-identifier">opts</span>, <span class="ruby-identifier">config</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">opts</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+
+      <span class="ruby-identifier">object</span>, <span class="ruby-identifier">task</span>    = <span class="ruby-identifier">_prepare_for_invocation</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">task</span>)
+      <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">instance</span> = <span class="ruby-identifier">_initialize_klass_with_initializer</span>(<span class="ruby-identifier">object</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">opts</span>, <span class="ruby-identifier">config</span>)
+
+      <span class="ruby-identifier">method_args</span> = []
+      <span class="ruby-identifier">current</span> = <span class="ruby-ivar">@_invocations</span>[<span class="ruby-identifier">klass</span>]
+
+      <span class="ruby-identifier">iterator</span> = <span class="ruby-identifier">proc</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">_</span>, <span class="ruby-identifier">task</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">task</span>.<span class="ruby-identifier">name</span>)
+          <span class="ruby-identifier">current</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">task</span>.<span class="ruby-identifier">name</span>
+          <span class="ruby-identifier">task</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">method_args</span>)
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task</span>
+        <span class="ruby-identifier">args</span> <span class="ruby-operator">||=</span> []
+        <span class="ruby-identifier">method_args</span> = <span class="ruby-identifier">args</span>[<span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">size</span>, <span class="ruby-value">-1</span>)] <span class="ruby-operator">||</span> []
+        <span class="ruby-identifier">iterator</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">task</span>)
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">all_tasks</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">iterator</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

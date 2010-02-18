@@ -1,0 +1,30 @@
+<%= error_messages_for :banner -%>
+<% form_for [:admin, @banner], :html => { :multipart => true }  do |f| -%>
+<Script>
+function remove_fields(link) {
+  $(link).prev("input[type=hidden]").val("1");
+  $(link).closest(".fields").hide();
+}
+
+function add_fields(link, association, content) {
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  $(link).parent().before(content.replace(regexp, new_id));
+}
+</script>  
+  <div class='field'>
+    <%= f.label :banner_name -%>
+    <%= f.text_field :banner_name, :class => 'larger' -%>
+  </div>
+<br>
+		<% @banner.image_banners.each do |image_banner|%>
+			<% f.fields_for :image_banners, image_banner do |builder| %>
+			    <%= render "image_banner_fields", :f => builder, :obj => image_banner %>
+			  <% end %>
+		<% end %>
+	
+	<div class='fields clearfix'><br><%= link_to_add_fields "Add another Image", f, :image_banners %></div>
+ 
+  </div>
+  <%= render :partial => "/shared/admin/form_actions", :locals => {:f => f, :continue_editing => false} %>
+<% end -%>

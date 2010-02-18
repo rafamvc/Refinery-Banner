@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: gems
+block_params: 
+comment: 
+full_name: Bundler::Runtime#specs
+is_singleton: false
+name: specs
+params: ()
+visibility: public

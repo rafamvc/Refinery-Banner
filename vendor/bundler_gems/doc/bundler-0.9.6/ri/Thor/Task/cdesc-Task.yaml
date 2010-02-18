@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: FILE_REGEXP
+  value: /^#{Regexp.escape(File.dirname(__FILE__))}/
+full_name: Thor::Task
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: formatted_usage
+- !ruby/object:RI::MethodSummary 
+  name: required_options
+- !ruby/object:RI::MethodSummary 
+  name: run
+name: Task
+superclass: Struct.new(:name, :description, :usage, :options)
